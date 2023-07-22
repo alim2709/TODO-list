@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "catalog"
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -70,7 +73,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'to_do_list.wsgi.application'
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
