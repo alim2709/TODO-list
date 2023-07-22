@@ -53,7 +53,6 @@ urlpatterns = [
         TagDeleteView.as_view(),
         name="tag-delete"
     )
-
 ]
 
 app_name = "catalog"

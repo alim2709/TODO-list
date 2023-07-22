@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1>Tag list</h1>
+  <h1> Tag list
+    <a class="btn btn-primary" href="{% url "catalog:tag-create" %}">Add tag</a>
+  </h1>
   <table>
   <tr>
     <th>Name</th>
