@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    TODO list
+    <a class="btn btn-primary" href="{% url "catalog:task-create" %}">Add task</a>
+  </h1>
+<div class="center-block">
+  {% for task in task_list %}
+      <p>{{ task.name }} {% if task.is_completed %}
+        <strong class="text-success">Done</strong>
+        {% else %}
+        <strong class="text-danger">Not done</strong>
+      {% endif %} </p>
+    <form action="{% url "catalog:todo-list" %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="task_id" value="{{ task.id }}">
+        {% if task.is_completed %}
+            <button type="submit" class="btn btn-success">Undo</button>
+        {% else %}
+            <button type="submit" class="btn btn-success">Complete</button>
+        {% endif %}
+    </form>
+    <p>Created at: {{ task.datetime }}</p>
+    <h2>Tags:</h2>
+
+      {% for tag in task.tags.all %}
+        {{ tag.name }}
+
+      {% endfor %}
+        <p><a class="btn btn-primary" href="{% url "catalog:task-update" pk=task.id %}">Update</a>
+        <a class="btn btn-danger" href="{% url "catalog:task-delete" pk=task.id %}">Delete</a></p>
+    <br>
+    <br>
+  {% endfor %}
+</div>
+{% endblock %}
