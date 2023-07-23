@@ -4,7 +4,7 @@ This app can help you create a tasks to manage your time perfectly
 Local deployment instruction
 To deploy the Task Manager project locally, please follow the steps below:
 
-Clone the repository to your local machine: git clone https://github.com/neostyle88/todo.git
+Clone the repository to your local machine: git clone https://github.com/alim2709/TODO-list.git
 
 Navigate to the project directory: cd todo
 
