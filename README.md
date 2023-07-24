@@ -13,8 +13,11 @@ Create a virtual environment: python -m venv env
 Activate the virtual environment:
 
 For Windows:  .\env\Scripts\activate
+
 For macOS : source env/bin/activate
+
 For Linux : source env/bin/activate
+
 Install the project dependencies: pip install -r requirements.txt
 
 Environment Variables
